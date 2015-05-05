@@ -22,6 +22,7 @@
 #import "DVClient+HTTP.h"
 #import "DVDatasource.h"
 #import "DVResource.h"
+#import "NSString+DVUtils.h"
 
 NSString * const DVErrorDomain = @"com.orange.datavenue.client";
 
@@ -40,8 +41,12 @@ NSString * const DVOrangePartnerKeyHeaderKey = @"X-OAPI-Key";
         NSMutableString * buff = [[NSMutableString alloc] init];
         for (NSString * key in params)
         {
+            id value = params[key];
+            if ([value isKindOfClass:[NSString class]]) {
+                value = [value URLEscape];
+            }
             [buff appendString:(buff.length == 0) ? @"?" : @"&"];
-            [buff appendFormat:@"%@=%@", key, params[key]];
+            [buff appendFormat:@"%@=%@", key, value];
         }
         path = [path stringByAppendingString:buff];
     }

@@ -33,4 +33,9 @@ static dispatch_once_t onceToken;
     return [iso8601Formatter stringFromDate:value];
 }
 
+
+- (NSString *)URLEscape
+{
+    return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)self, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
+}
 @end

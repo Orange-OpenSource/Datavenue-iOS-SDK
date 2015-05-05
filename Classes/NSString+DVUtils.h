@@ -13,4 +13,6 @@
 - (NSDate *)dateUsingISO8601Encoding;
 + (NSString *)iso8601stringFromDate:(NSDate *)value;
 
+- (NSString *)URLEscape;
+
 @end
