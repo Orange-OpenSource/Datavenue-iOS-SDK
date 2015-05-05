@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>Endpoint</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>API Endpoint</string>
+			<key>Key</key>
+			<string>baseURL</string>
+			<key>DefaultValue</key>
+			<string>https://api.orange.com/datavenue/v1/</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Client ID</string>
+			<key>Key</key>
+			<string>clientID</string>
+			<key>DefaultValue</key>
+			<string>HGvvZGZaitG5MIMiQkPBFAtHZPBDArra</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Account</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>Key</key>
+			<string>accountId</string>
+			<key>Title</key>
+			<string>ID</string>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>DefaultValue</key>
+			<string>537c6fc33bae42d6b9fc6e6ffca1a2da</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Primary Master Key</string>
+			<key>Key</key>
+			<string>primaryMasterKey</string>
+			<key>DefaultValue</key>
+			<string>ddce1ba92d344e0c8a7dea639f4ecd2b</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Master Key</string>
+			<key>Key</key>
+			<string>masterKey</string>
+			<key>DefaultValue</key>
+			<string>3b4444cd33704ef6b198446c53dea7e7</string>
+		</dict>
+	</array>
+	<key>StringsTable</key>
+	<string>Root</string>
+</dict>
+</plist>

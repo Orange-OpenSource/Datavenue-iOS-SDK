@@ -1,0 +1,3 @@
+target 'DatavenueSample', :exclusive => true do
+  pod "Datavenue", :path => "../"
+end
