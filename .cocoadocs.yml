@@ -1,0 +1,10 @@
+additional_guides:
+     - Docs/Overview.md
+
+highlight-color: "#FF6E00"
+highlight-dark-color: "#E36200"
+darker-color: "#C6B7B2"
+darker-dark-color: "#A8A8A8"
+background-color: "#F2F2F2"
+alt-link-color: "#8C3D00"
+warning-color: "#ED124F"
