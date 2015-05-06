@@ -11,7 +11,7 @@ To run the sample project, clone this repo, and run `pod install` from the Sampl
 
 Datavenue iOS SDK is available through [CocoaPods](http://cocoapods.org). To install it, simply add the following line to your Podfile:
 
-pod "Datavenue"
+    pod "Datavenue"
 
 ## Documentation
 
