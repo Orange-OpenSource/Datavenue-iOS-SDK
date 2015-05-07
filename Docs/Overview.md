@@ -56,7 +56,7 @@ A Stream is intended to represent a type of data that an IoT device can upload t
 
 A Value can be of any type (string, numeric or JSON data). Each value can be associted with a timestamp (that defaults to the server's current time), a location and some custom metadata.
 
-## Keys
+### Keys
 
 The keys are used for authentication and resources access management. 
 There are 3 types of keys that can be used to make calls on the Datavenue API:
@@ -67,7 +67,7 @@ There are 3 types of keys that can be used to make calls on the Datavenue API:
 
 - `API Key`: these keys have the most restricted scope and are used to access and manage a single Datasource or Prototype in particular. They are created using either the portal Datavenue or using the SDK.
 
-### Key rights
+#### Key rights
 
 Master Keys and API Keys can restrict the type of operations they can handle. This allows to create write-only keys (e.g for device uploading sensor data) and read-only keys (e.g. for a monitoring application). The rights are based on the REST verbs :
 
@@ -78,7 +78,7 @@ Master Keys and API Keys can restrict the type of operations they can handle. Th
 
 All these rights can be combined at the Account (with Master Keys) or Datasource (with API Keys) levels to create a powerful and fine-grained rights management system for your IoT application.
 
-### Key regeneration
+#### Key regeneration
 
 All keys can be revoked simply by regenerating them at any time.
 Note that only the `Primary Master Key` can revoke itself or `Master Keys` and only the `Master Keys` can revoke `API Keys`.
@@ -90,10 +90,10 @@ Note that only the `Primary Master Key` can revoke itself or `Master Keys` and o
 
 The library needs two access keys in order to be allowed to make requests to the Datavenue API:
 
- - a `CliendID` which is available from the Orange Partner website.
+ - a `cliendID` which is available from the Orange Partner website.
  - a `key` (one of `Primary Master Key`, `Master Key` or `API Key`) which you can access from the Datavenue account page.
 
-It is the application responsability to store these `ClientID` and `key` in a secure way.
+It is the application responsability to store `clientID` and `key` in a secure way.
 
 ## Asynchronous requests
 
