@@ -64,24 +64,24 @@ NSString * const DVDatavenuBackendEndpoint = @"https://api.orange.com/datavenue/
      }];
 }
 
-- (void)accountWithID:(NSString *)accountID completionHandler:(void (^)(DVAccount *, NSError *))completionHandler
+- (void)accountWithID:(NSString *)accountID completionHandler:(void (^)(DVAccount * account, NSError * error))completionHandler
 {
     [self getResourceWithID:accountID atPath:@"accounts" params:nil type:[DVAccount class] completionHandler:completionHandler];
 }
 
-- (void)datasourceWithID:(NSString *)datasourceID completionHandler:(void (^)(DVDatasource *, NSError *))completionHandler
+- (void)datasourceWithID:(NSString *)datasourceID completionHandler:(void (^)(DVDatasource * datasource, NSError * error))completionHandler
 {
-    [self getResourceWithID:datasourceID atPath:@"datasources" params:nil type:[DVAccount class] completionHandler:completionHandler];
+    [self getResourceWithID:datasourceID atPath:@"datasources" params:nil type:[DVDatasource class] completionHandler:completionHandler];
 }
 
-- (void)prototypeWithID:(NSString *)prototypeID completionHandler:(void (^)(DVPrototype *, NSError *))completionHandler
+- (void)prototypeWithID:(NSString *)prototypeID completionHandler:(void (^)(DVPrototype * prototype, NSError * error))completionHandler
 {
-    [self getResourceWithID:prototypeID atPath:@"prototypes" params:nil type:[DVAccount class] completionHandler:completionHandler];
+    [self getResourceWithID:prototypeID atPath:@"prototypes" params:nil type:[DVPrototype class] completionHandler:completionHandler];
 }
 
-- (void)templateWithID:(NSString *)templateID completionHandler:(void (^)(DVTemplate *, NSError *))completionHandler
+- (void)templateWithID:(NSString *)templateID completionHandler:(void (^)(DVTemplate * template, NSError * error))completionHandler
 {
-    [self getResourceWithID:templateID atPath:@"templates" params:nil type:[DVAccount class] completionHandler:completionHandler];
+    [self getResourceWithID:templateID atPath:@"templates" params:nil type:[DVTemplate class] completionHandler:completionHandler];
 }
 
 - (void)datasourcesWithParams:(NSDictionary *)params completionHandler:(void (^)(NSArray * datasources, NSError * error))completionHandler
