@@ -141,4 +141,28 @@ typedef NS_ENUM(NSUInteger, DVErrorCode)
  */
 - (void)templatesWithParams:(NSDictionary*)params completionHandler:(void (^)(NSArray * templates, NSError * error))completionHandler;
 
+
+/**
+ * Add values directly to the stream of a datasource.
+ * This call provides a shortcut to the rest of the API.
+ *
+ * @param values Values can be either some DVValue or any kind of JSON Object values.
+ * @param datasourceID the ID of the datasource
+ * @param streamID the ID of the stream
+ * @param completionHandler The handler will pass an error if any, or nil on success.
+ */
+- (void)appendValues:(NSArray *)values datasourceID:(NSString *)datasourceID streamID:(NSString *)streamID completionHandler:(void (^)(NSError * error))completionHandler;
+
+
+/**
+ * Add values directly to the stream of a prototype.
+ * This call provides a shortcut to the rest of the API.
+ *
+ * @param values Values can be either some DVValue or any kind of JSON Object values.
+ * @param datasourceID the ID of the datasource
+ * @param streamID the ID of the stream
+ * @param completionHandler The handler will pass an error if any, or nil on success.
+ */
+- (void)appendValues:(NSArray *)values prototypeID:(NSString *)prototypeID streamID:(NSString *)streamID completionHandler:(void (^)(NSError * error))completionHandler;
+
 @end

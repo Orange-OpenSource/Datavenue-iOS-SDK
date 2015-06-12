@@ -99,4 +99,16 @@ NSString * const DVDatavenuBackendEndpoint = @"https://api.orange.com/datavenue/
     [self getResourcesAtPath:@"templates" params:params type:[DVTemplate class] completionHandler:completionHandler];
 }
 
+- (void)appendValues:(NSArray *)values datasourceID:(NSString *)datasourceID streamID:(NSString *)streamID completionHandler:(void (^)(NSError * error))completionHandler
+{
+    NSString * path = [NSString stringWithFormat:@"datasources/%@/streams/%@/values", datasourceID, streamID];
+    [self postResources:values atPath:path params:nil completionHandler:completionHandler];
+}
+
+- (void)appendValues:(NSArray *)values prototypeID:(NSString *)prototypeID streamID:(NSString *)streamID completionHandler:(void (^)(NSError * error))completionHandler
+{
+    NSString * path = [NSString stringWithFormat:@"prototypes/%@/streams/%@/values", prototypeID, streamID];
+    [self postResources:values atPath:path params:nil completionHandler:completionHandler];
+}
+
 @end
