@@ -37,7 +37,7 @@
     }
     if (self.at)
     {
-        jsonData[@"at"] = self.at;
+        jsonData[@"at"] = [NSString iso8601stringFromDate:self.at];
     }
     if (self.metadata)
     {
