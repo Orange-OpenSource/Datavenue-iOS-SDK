@@ -17,7 +17,7 @@ static dispatch_once_t onceToken;
 {
     dispatch_once(&onceToken, ^{
         iso8601Formatter = [[NSDateFormatter alloc] init];
-        iso8601Formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
+        iso8601Formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
     });
     
     return [iso8601Formatter dateFromString:self];
@@ -27,7 +27,7 @@ static dispatch_once_t onceToken;
 {
     dispatch_once(&onceToken, ^{
         iso8601Formatter = [[NSDateFormatter alloc] init];
-        iso8601Formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
+        iso8601Formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
     });
     
     return [iso8601Formatter stringFromDate:value];
