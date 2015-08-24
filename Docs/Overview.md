@@ -11,9 +11,9 @@ The aim is to assist IoT developers by offering a centralized storage, and all t
 ## Service access
 
 The service is accessible from the internet. 
-Access URL is: https://datavenue.orange.com/api/v1
+Access URL is: https://datavenue.orange.com/
 
-Access to the API Datavenue is secured by [Orange Partner](https://www.orangepartner.com). You must previously subscribe to Orange Partner (sign up [here](https://www.orangepartner.com/user/register)) to obtain an authorization id. This id (named ClientID in the iOS SDK) will be used for all API requests.
+Access to the API Datavenue is secured by Orange Partner (https://www.orangepartner.com/content/datavenue-fr-api). You must previously subscribe to Orange Partner (sign up [here](https://www.orangepartner.com/user/register)) to obtain an authorization id. This id (named ClientID in the iOS SDK) will be used for all API requests.
 
 ## Resource model
 
